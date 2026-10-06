@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5ff;
+    color: #222;
+}
+
+/* LOGIN */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.login-box h1 {
+    color: #4b45c6;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4b45c6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3832a3;
+}
+
+.register-btn {
+    background: #28a745;
+}
+
+.register-btn:hover {
+    background: #218838;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* HIDE */
+
+.hidden {
+    display: none;
+}
+
+
+/* HEADER */
+
+header {
+    background: #4b45c6;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    color: white;
+}
+
+
+/* LOGOUT */
+
+.logout-btn {
+    width: auto;
+    background: #dc3545;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+main > h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* CANDIDATE */
+
+#candidateList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.candidate {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.candidate h3 {
+    color: #4b45c6;
+    margin-bottom: 10px;
+}
+
+.candidate p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+
+/* VOTE MESSAGE */
+
+#voteMessage {
+    margin: 25px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* RESULTS */
+
+.results {
+    background: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.results h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.result-item {
+    padding: 12px;
+    margin: 8px 0;
+    background: #f1f1ff;
+    border-radius: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    #candidateList {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .logout-btn {
+        width: 120px;
+    }
+}

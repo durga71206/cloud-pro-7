@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Online Voting System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <section id="loginSection" class="page">
+
+        <div class="login-box">
+
+            <h1>Cloud Online Voting</h1>
+
+            <p>College Online Voting System</p>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter Email"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="login()">Login</button>
+
+            <button onclick="register()" class="register-btn">
+                Register
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- VOTING PAGE -->
+    <section id="votingSection" class="hidden">
+
+        <header>
+
+            <div>
+                <h1>Cloud Online Voting System</h1>
+                <p>College Student Election</p>
+            </div>
+
+            <button onclick="logout()" class="logout-btn">
+                Logout
+            </button>
+
+        </header>
+
+
+        <main>
+
+            <h2>Choose Your Candidate</h2>
+
+            <div id="candidateList">
+
+                <div class="candidate">
+
+                    <h3>Candidate 1</h3>
+
+                    <p>Arun Kumar</p>
+
+                    <button onclick="vote('Candidate 1', 'Arun Kumar')">
+                        Vote
+                    </button>
+
+                </div>
+
+
+                <div class="candidate">
+
+                    <h3>Candidate 2</h3>
+
+                    <p>Priya Sharma</p>
+
+                    <button onclick="vote('Candidate 2', 'Priya Sharma')">
+                        Vote
+                    </button>
+
+                </div>
+
+
+                <div class="candidate">
+
+                    <h3>Candidate 3</h3>
+
+                    <p>Rahul Kumar</p>
+
+                    <button onclick="vote('Candidate 3', 'Rahul Kumar')">
+                        Vote
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div id="voteMessage"></div>
+
+
+            <!-- RESULTS -->
+
+            <div class="results">
+
+                <h2>Voting Results</h2>
+
+                <button onclick="showResults()">
+                    View Results
+                </button>
+
+                <div id="resultList"></div>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
